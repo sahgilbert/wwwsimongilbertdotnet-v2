@@ -1,0 +1,31 @@
+baseURL = 'https://www.simongilbert.net/'
+languageCode = 'en-gb'
+theme = 'hugo-blog-awesome'
+title = 'Simon Gilbert Blog'
+sitename = "Simon Gilbert Blog"
+defaultColor = "dark" # set color mode: dark, light, auto
+description = "Simon Gilbert Blog on Software Development, Programming Languages, Distributed Systems, Unit Testing & Cloud Computing!"
+additionalScripts = ['js/custom.js', 'js/custom-2.js']
+
+[services]
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable Google Analytics, simply leave the field empty or remove the next two lines
+  [services.googleAnalytics]
+    id = 'G-GWHK09FN1B' # G-MEASUREMENT_ID
+
+[params]
+favicon = "/favicon.ico"
+
+[params.author]
+# Path to the author's avatar image file, relative to the `static` folder
+avatar = "images/avatar.svg" # Update with the actual path to your avatar image
+
+# Author's name for the `alt` attribute on images and as the display name
+name = "Simon Gilbert"
+# Introductory text or tagline for the author
+intro = "Simon Gilbert"
+# Short bio or description of the author
+description = "My insights into Programming Languages, Distributed Systems, Unit Testing & Cloud Computing!"
+
+[taxonomies]
+  tag = "tags"
