@@ -2,9 +2,7 @@ baseURL = 'https://www.simongilbert.net/'
 languageCode = 'en-gb'
 theme = 'hugo-blog-awesome'
 title = 'Simon Gilbert Blog'
-sitename = "Simon Gilbert Blog"
 defaultColor = "dark" # set color mode: dark, light, auto
-description = "Simon Gilbert Blog on Software Development, Programming Languages, Distributed Systems, Unit Testing & Cloud Computing!"
 additionalScripts = ['js/custom.js', 'js/custom-2.js']
 
 [services]
@@ -15,6 +13,9 @@ additionalScripts = ['js/custom.js', 'js/custom-2.js']
 
 [params]
 favicon = "/favicon.ico"
+sitename = "Software Development Blog covering everything full stack!"
+description = "Simon Gilbert Blog on Software Development, Programming Languages, Distributed Systems, Unit Testing & Cloud Computing!"
+ogimage = "/images/avatar.svg"
 
 [params.author]
 # Path to the author's avatar image file, relative to the `static` folder
