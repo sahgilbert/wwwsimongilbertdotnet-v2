@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{{- $defaultColor := .Site.Params.defaultColor | default "auto" -}}
+
+{{/* allow website developer to enforce default dark mode */}}
+{{- if eq $defaultColor "dark" -}}
+<html lang="{{ .Site.LanguageCode }}" class="dark">
+{{- else if eq $defaultColor "light" -}}
+<html lang="{{ .Site.LanguageCode }}" class="light">
+{{- else -}}
+<html lang="{{ .Site.LanguageCode }}">
+{{- end -}}
+
+{{- partial "head.html" . -}}
+
+<body data-theme="{{ $defaultColor }}" class="notransition">
+    {{- partial "scriptsBodyStart.html" . -}}
+    {{- partial "header.html" . -}}
+    <div class="wrapper">
+        {{ partial "bio" . }}
+        <main aria-label="Content">
+            <h3 class="posts-item-note" aria-label="Recent Posts">{{ T "home.recent_posts" }}</h3>
+            
+            <!-- Top 10 Popular Tags Section -->
+            <section class="popular-tags">
+                <h3 class="popular-tags-title">Popular Tags</h3>
+                <ul class="popular-tags-list">
+                    {{ $topTags := slice }}
+                    {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+                        {{ $topTags = $topTags | append (dict "tag" $key "count" (len $taxonomy.Pages)) }}
+                    {{ end }}
+                    {{ $sortedTags := sort $topTags "count" "desc" }}
+                    {{ range first 10 $sortedTags }}
+                    <li class="popular-tag-item">
+                        <a href="{{ (index $.Site.Taxonomies.tags .tag).Page.Permalink }}" class="popular-tag-link">
+                            {{ .tag }} ({{ .count }})
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </section>
+            
+            {{ $pagesToShow := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+            {{ $posts := $pagesToShow.ByDate.Reverse }}
+            {{ range $posts }}
+            {{ partial "postCard" . }}
+            {{ end }}
+        </main>
+    </div>
+    {{- partial "footer.html" . -}}
+    {{- partial "scriptsBodyEnd.html" . -}}
+</body>
+
+</html>

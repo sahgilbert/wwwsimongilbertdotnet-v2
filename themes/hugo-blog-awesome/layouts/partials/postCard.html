@@ -1,0 +1,29 @@
+<article class="post-item">
+    <a href="{{ .Permalink }}" class="post-link">
+        <h4 class="post-item-title">
+            {{ .Title }}
+        </h4>
+        <!-- Display the summary of each post -->
+        <p class="post-summary">
+            {{ .Params.summary }}
+        </p>
+        {{/* format date string to create an ISO 8601 string */}}
+        {{ $ISO_date := "2006-01-02T15:04:05Z0700" }}
+        {{ $configDateFormat := .Site.Params.dateFormat | default "2 Jan 2006" }}
+        <div>
+            <small class="blog-post-small-date">
+                <time class="post-item-meta" datetime="{{ dateFormat $ISO_date .Date }}">
+                    {{ time.Format $configDateFormat .Date }}
+                </time>
+            </small>
+        </div>
+        {{/* Display up to 5 tags if they exist */}}
+        {{ if .Params.tags }}
+        <div class="post-tags">
+            {{ range first 5 .Params.tags }}
+                <span class="post-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </a>
+</article>

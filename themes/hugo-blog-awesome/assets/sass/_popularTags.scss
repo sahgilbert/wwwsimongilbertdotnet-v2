@@ -1,0 +1,48 @@
+/* Styling for the Popular Tags Section */
+.popular-tags {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 2px solid #af51f2;
+    border-radius: 16px;
+    background-color: #131418; /* Dark background color */
+    color: #ffffff; /* Ensure text is visible on dark background */
+}
+
+.popular-tags-title {
+    color: #af51f2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.popular-tags-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.popular-tag-item {
+    display: inline-block;
+}
+
+.popular-tag-link {
+    display: inline-block;
+    padding: 0.25rem 0.5rem; /* Smaller padding for a compact look */
+    font-size: 0.875rem; /* Smaller font size */
+    background-color: #af51f2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly rounded corners for the tags */
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s;
+    text-transform: capitalize; /* Converts text to title case */
+}
+
+.popular-tag-link:hover {
+    background-color: #922cd7;
+    transform: scale(1.05);
+}
