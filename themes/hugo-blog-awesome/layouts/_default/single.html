@@ -13,11 +13,6 @@
                 {{ end }}
             </header>
             {{ partial "toc.html" .}}
-            {{ if .Params.image }}
-                <div class="centered-landscape-image">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}">
-                </div>
-            {{ end }}
             <hr class="hr-blog-header"/>
             <div class="page-content">
                 {{ .Content }}
