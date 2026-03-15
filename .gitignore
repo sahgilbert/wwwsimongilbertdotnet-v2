@@ -33,8 +33,6 @@ Desktop.ini
 .venv/
 .env/
 
-# Git submodules
-/.gitmodules
 
 # Logs and caches
 npm-debug.log*
