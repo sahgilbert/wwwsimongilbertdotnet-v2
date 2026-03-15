@@ -1,0 +1,79 @@
+// ─── Catppuccin Mocha Rebrand ─────────────────────────────────────────────────
+
+// Gradient accent bar across the top of the page
+html.dark body::before,
+html:not(.light) body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, $ctp-mauve, $ctp-sapphire, $ctp-green);
+  z-index: 9999;
+}
+
+// JetBrains Mono on headings
+html.dark,
+html:not(.light) {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    letter-spacing: -0.02em;
+  }
+
+  // Terminal > prompt before author name
+  .author-name::before {
+    content: '> ';
+    color: $ctp-green;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-weight: 400;
+  }
+
+  // // prefix before section labels (Recent Posts heading)
+  h3.posts-item-note::before {
+    content: '// ';
+    color: $ctp-overlay0;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-weight: 400;
+  }
+
+  // Post title monospace
+  .post-item-title,
+  .post-item-title a {
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 0.88em;
+    letter-spacing: -0.02em;
+  }
+
+  // Tags as IDE language badges
+  .post-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', Consolas, monospace;
+    font-size: 0.72em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    border: 1px solid $ctp-surface1;
+    background-color: $ctp-surface0;
+    color: $ctp-mauve;
+    margin-right: 4px;
+    letter-spacing: 0;
+  }
+
+  // Enhanced code blocks
+  pre {
+    background-color: #181825 !important;
+    border: 1px solid $ctp-surface1;
+    border-radius: 6px;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', Consolas, monospace;
+  }
+
+  // Author bio in Inter
+  .author-bio {
+    font-family: 'Inter', Roboto, sans-serif;
+    color: $ctp-overlay0;
+  }
+}

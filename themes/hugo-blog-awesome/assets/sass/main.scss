@@ -16,27 +16,35 @@ $smoke: #d2c7c7;
 $gray: #6b7886;
 $white: #fff;
 
-//////////////// 2. Dark Colors /////////////////
-$dark-text-base-color: #babdc4;
-$dark-text-link-blue: #77a8fd;
-$dark-text-link-blue-active: #5292ff;
-$dark-bloquote-border: #4a4d56;
-$dark-blockquote-text: #9b9ba3;
-$dark-inline-code-text: #c2c4ca;
-$dark-inline-code-bg: #2d2d2d;
-$dark-toc-bg: #323232;
-$dark-go-top-bg: #676767b3;
-$dark-go-top-bg-hover: #676767;
+//////////////// 2. Dark Colors — Catppuccin Mocha /////////////////
+$dark-text-base-color: #cdd6f4;
+$dark-text-link-blue: #89b4fa;
+$dark-text-link-blue-active: #74c7ec;
+$dark-bloquote-border: #45475a;
+$dark-blockquote-text: #a6adc8;
+$dark-inline-code-text: #cdd6f4;
+$dark-inline-code-bg: #313244;
+$dark-toc-bg: #181825;
+$dark-go-top-bg: #313244b3;
+$dark-go-top-bg-hover: #313244;
 
-$dark-black: #131418;
-$dark-white: #eaeaea;
-$dark-light: #1b1d25;
-$dark-smoke: #4a4d56;
-$dark-gray: #767f87;
+$dark-black: #1e1e2e;
+$dark-white: #cdd6f4;
+$dark-light: #313244;
+$dark-smoke: #45475a;
+$dark-gray: #6c7086;
+
+// Catppuccin Mocha accent colours
+$ctp-mauve: #cba6f7;
+$ctp-sapphire: #74c7ec;
+$ctp-green: #a6e3a1;
+$ctp-surface0: #313244;
+$ctp-surface1: #45475a;
+$ctp-overlay0: #6c7086;
 
 //////////////// 3. Fonts preferences /////////////////
-$sans-family: Roboto, sans-serif;
-$mono-family: Consolas, monospace;
+$sans-family: 'Inter', Roboto, sans-serif;
+$mono-family: 'JetBrains Mono', Consolas, monospace;
 $base-font-size: 20px;
 $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;
