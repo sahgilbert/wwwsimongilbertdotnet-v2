@@ -1,19 +1,5 @@
 // ─── Catppuccin Mocha Rebrand ─────────────────────────────────────────────────
 
-// Gradient accent bar across the top of the page
-html.dark body::before,
-html:not(.light) body::before {
-  content: '';
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, $ctp-mauve, $ctp-sapphire, $ctp-green);
-  z-index: 9999;
-}
-
 // JetBrains Mono on headings
 html.dark,
 html:not(.light) {
