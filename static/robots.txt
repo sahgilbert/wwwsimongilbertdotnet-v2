@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.simongilbert.net/sitemap.xml
+Sitemap: https://simongilbert.net/sitemap.xml

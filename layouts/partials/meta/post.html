@@ -37,9 +37,10 @@
 
     <script defer type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "Article",
         "headline": {{ .Title }},
+        "url": "{{ .Permalink }}",
         "author": {
             "@type": "Person",
             "name": "{{ .Site.Params.author.name }}"
@@ -47,7 +48,10 @@
         "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
         "description": {{ $jsonld_description }},
         "wordCount": {{ .WordCount }},
-        "mainEntityOfPage": "True",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+        },
         "dateModified": "{{ dateFormat "2006-01-02" .Lastmod }}",
         "image": {
             "@type": "imageObject",
@@ -55,7 +59,11 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "{{ .Site.Title }}"
+            "name": "{{ .Site.Title }}",
+            "logo": {
+                "@type": "imageObject",
+                "url": "{{ .Site.Params.ogimage | absURL }}"
+            }
         }
     }
     </script>

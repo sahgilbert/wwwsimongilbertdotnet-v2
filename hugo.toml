@@ -3,7 +3,9 @@ languageCode = 'en-gb'
 theme = 'hugo-blog-awesome'
 title = 'Simon Gilbert Blog'
 defaultColor = "dark" # set color mode: dark, light, auto
-additionalScripts = ['js/custom.js', 'js/custom-2.js']
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
 
 [services]
 # To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
